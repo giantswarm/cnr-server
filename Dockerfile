@@ -25,6 +25,7 @@ RUN git clone https://github.com/app-registry/appr && \
   pip install -e . && \
   pip install jsonnet && \
   pip install -r requirements_dev.txt -U && \
+  pip install urllib3==1.21.1 && \
   chown -R 1001:1001 ${HOME}
 
 USER ${USER}
