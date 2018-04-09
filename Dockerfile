@@ -16,7 +16,7 @@ RUN apk -Uuv add --update --no-cache \
       git=2.15.0-r1 \
       build-base=0.5-r0 \
       libffi-dev=3.2.1-r4 \
-      openssl-dev=1.0.2n-r0
+      openssl-dev=1.0.2o-r0
 
 WORKDIR ${HOME}
 
