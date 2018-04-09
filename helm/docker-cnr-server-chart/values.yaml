@@ -1,0 +1,10 @@
+name: docker-cnr-server
+namespace: default
+
+replicas: 1
+
+port: 5000
+
+image:
+  repository: quay.io/giantswarm/docker-cnr-server
+  tag: [[ .SHA ]]
