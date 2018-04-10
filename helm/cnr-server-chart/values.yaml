@@ -1,0 +1,10 @@
+name: cnr-server
+namespace: default
+
+replicas: 1
+
+port: 5000
+
+image:
+  repository: quay.io/giantswarm/cnr-server
+  tag: [[ .SHA ]]
