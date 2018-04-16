@@ -1,5 +1,4 @@
 name: cnr-server
-namespace: default
 
 replicas: 1
 
