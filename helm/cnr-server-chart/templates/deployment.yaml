@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.name }}
@@ -7,6 +7,9 @@ metadata:
 spec:
   replicas: 1
   revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
   strategy:
     type: RollingUpdate
   template:
@@ -16,7 +19,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
         - name: http
           containerPort: {{ .Values.port }}
